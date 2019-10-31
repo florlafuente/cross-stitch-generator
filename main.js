@@ -14,16 +14,17 @@ function clearGrid() {
 
 function generateRows () {
   let rowsNumber =  parseInt(document.getElementById('rowsInput').value);
-  let cols = generateCols();
 
   let rows = '';
 
   for (i = 0; i < rowsNumber; i++) {
-    const singleRow = '<div class="row">' + cols + '</div>';
+    let singleRow = '<div class="row">' + generateCols() + '</div>';
     rows += singleRow;
   };
 
   return rows;
+
+  
 };
 
 function generateCols () {
@@ -31,8 +32,7 @@ function generateCols () {
   let cols = '';
 
   for (i = 0; i < colsNumber; i++) {
-    const randomColor = getRandomColor();
-    cols += `<div class="col" style="color:${randomColor}">X</div>`;
+    cols += `<div class="col" style="color:${getRandomColor()}">X</div>`;
   };
 
   return cols;
