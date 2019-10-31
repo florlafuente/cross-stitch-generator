@@ -1,0 +1,10 @@
+.row {
+  border-collapse: collapse;
+  display: inline-block;
+}
+
+.col {
+  border: 1px dotted gray;
+  height: 20px;
+  width: 20px;
+}
