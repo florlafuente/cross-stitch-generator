@@ -1,21 +1,46 @@
-<html>
+<!doctype html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0" />
     <title>Cross stitch generator 🦄</title>
     <link rel="stylesheet" type="text/css" href="./styles.css">
   </head>
   <body>
     <header>
       <h1>Cross stitch generator 🦄</h1>
+      <h2>Create a random cross stitch pattern</h2>
     </header>
     <main>
-      <section>
+      <section class="pattern-settings">
         <div>
+          <label>Grid (cols x rows)</label>
+          <input type="number" value="16" id="colsInput" />
+          <span>x</span>
+          <input type="number" value="8" id="rowsInput" />
+        </div>
+        <div>
+          <label>Color palette</label>
+          <select id="colorPaletteSelect">
+            <option value="#FFFFFF, #FFFFFF, #FFFFFF,#FFFFFF, #FFFFFF,#FFFFFF">Pink</option>
+            <option value="#FFFFFF, #FFFFFF, #FFFFFF,#FFFFFF, #FFFFFF,#FFFFFF">Green</option>
+            <option value="#FFFFFF, #FFFFFF, #FFFFFF,#FFFFFF, #FFFFFF,#FFFFFF">Yellow</option>
+            <option value="#FFFFFF, #FFFFFF, #FFFFFF,#FFFFFF, #FFFFFF,#FFFFFF">Blue</option>
+          </select>
+        </div>
+        <div>
+          <button onclick="generatePattern()">Generate pattern</button>
+          <button onclick="clearGrid()">Clear all</button>
+        </div>
+      </section>
+      <section class="pattern-wrapper">
+        <div class="pattern-container">
 
         </div>
       </section>
     </main>
     <footer>
-      footer
+      <span>Made with 💚 by Flor</span>
     </footer>
     <script type="text/javascript" src="./main.js">
     </script>
